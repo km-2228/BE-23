@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
+:root{
+    ---pr-color: #dda15e
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +11,52 @@
 
 body{
     font-family: "Poppins";
+    background-color: white;
+}
+
+/* navbar */
+
+.navMenu ul li a{
+    color: black;
+}
+
+.navMenu ul li a:hover{
+    color: aliceblue;
+}
+
+
+/* header */
+#header{
+    background: var(---pr-color);
+}
+
+.header{
+    height: 650px;
+}
+.header .deskripsi{
+    margin-top:150px;
+}
+
+.header h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.header .deskripsi .logo img{
+    height: 400px;
+    height: 400px;
+}
+
+/* konten */
+.konten{
+    height: 700px;
+}
+
+.konten .partner{
+    margin-top: 100px;
+}
+
+.konten .partner img{
+    width: 700px;
+    height: 500px;
 }
