@@ -24,14 +24,13 @@ body{
     color: aliceblue;
 }
 
-
 /* header */
 #header{
     background: var(---pr-color);
 }
 
 .header{
-    height: 650px;
+    height: 680px;
 }
 .header .deskripsi{
     margin-top:150px;
