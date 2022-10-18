@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+:root {
+  ---pr-color: #dda15e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins';
+  background-color: white;
+}
+.icon-search {
+  left: 12px;
+}
+
+.input-search {
+  padding-left: 36px;
+  font-size: 14px;
+}
+
+.image-person {
+  object-fit: cover;
+}
+
+.wrapper-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background-color: rgb(135, 38, 225);
+}
+
+.month {
+  color: rgb(187, 187, 187);
+  font-size: 12px;
+}
+
+.see-detail-btn {
+  font-size: 14px;
+}
+
+@media (min-width: 800px) {
+  .container-custom {
+    max-width: 768px;
+  }
+}
