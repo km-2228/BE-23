@@ -1,23 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
 *{
     margin: 0px;
     padding: 0px;
-    /* font-family: 'Nunito', 'sans-serif'; */
+    font-family: "Poppins";
 }
 
-.navbar-nav .nav-item .nav-link:focus {
-    text-decoration: underline;
+nav{
+    height: 12vh;
+  }
+  
+.navMenu ul li a{
+color: black;
+}
+
+.navMenu ul li a:hover{
+color: #dda15e;
+}
+
+.partner{
+    margin-top: 100px;
 }
 
 .gradient-background{
     background-image: linear-gradient(90deg, #6651f0, #f06efc);
 }
+
+.review h3{
+    /* color: #ffff; */
+    text-align: center;
+}
  
-.nav-link {
+/* .nav-link {
     font-size: 16px;
     margin: 3px;
     color: #fff!important;
     font-weight: 500;
-}
+} */
 
 .sosmed{
     font-size: 25px;
