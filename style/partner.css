@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
 
-:root {
-  ---pr-color: #dda15e;
+nav{
+  height: 12vh;
+}
+
+.navMenu ul li a{
+  color: black;
+}
+
+.navMenu ul li a:hover{
+  color: #dda15e;
 }
 
 * {
