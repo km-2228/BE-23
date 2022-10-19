@@ -15,13 +15,15 @@ body{
 }
 
 /* navbar */
-
+nav{
+    height: 12vh;
+}
 .navMenu ul li a{
     color: black;
 }
 
 .navMenu ul li a:hover{
-    color: aliceblue;
+    color: #dda15e;
 }
 
 /* header */
@@ -30,10 +32,10 @@ body{
 }
 
 .header{
-    height: 680px;
+    height: 720px;
 }
 .header .deskripsi{
-    margin-top:150px;
+    margin-top:190px;
 }
 
 .header h1{
