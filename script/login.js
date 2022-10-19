@@ -10,16 +10,21 @@ function login() {
 
     fetch(URL)
     .then((response) => response.json())
-    .then(index => {
+    .then(result => {
         // console.log(index)
-        index.map((data) => {
-            if(data.email == setEmail){
-                if(data.password == setPassword){
-                    window.location = "./../index.html"
-                }
+        let dataUsers = result.results;
+        dataUsers.forEach((data) => {
+            if(data.email == setEmail && data.password == setPassword){
+                alert("Success Login")
+                window.location = "./../index.html"
+            }
+            else{
+                alert("invalid login")
+                location.reload()  
             }
         })
     })
 }
+// login()
 
   
