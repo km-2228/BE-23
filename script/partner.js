@@ -6,12 +6,12 @@ const getDataApi = () => {
     .then((result) => {
     let partner = document.getElementById("cardPartner");
     
-    // console.log(result)
+    console.log(result)
       
     // let dataPartner = result.results;
     result.forEach((data) => {
         partner.innerHTML +=
-            `<div class="card rounded-4 shadow-sm text-white pt-4 px-2 pb-2 d-flex flex-column align-items-center">
+          `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center">
                 <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
                 alt="person"
@@ -45,9 +45,12 @@ const getDataApi = () => {
                 />
               </svg>
             </div>
-            <p class="month my-2"><b>Pengalaman :</b> `+data.pengalaman+`</p>
-            <p class="month my-2"><b>Pendidikan :</b> `+data.pendidikan+`</p>
-            <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>`;
+            <div class="text-start mx-auto">
+              <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
+              <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
+            </div> 
+            <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+          </div>`;
         });
     })
     .catch((error) => console.log(error));

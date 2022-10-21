@@ -9,7 +9,7 @@ nav{
 }
 
 .navMenu ul li a:hover{
-  color: #dda15e;
+  color: rgb(135, 38, 225);
 }
 
 * {
@@ -21,6 +21,7 @@ body {
   font-family: 'Poppins';
   background-color: white;
 }
+
 .icon-search {
   left: 12px;
 }
@@ -44,9 +45,10 @@ body {
   background-color: rgb(135, 38, 225);
 }
 
-.month {
-  color: rgb(187, 187, 187);
+.detail {
+  color: white;
   font-size: 12px;
+  margin-top: 10px;
 }
 
 .see-detail-btn {
