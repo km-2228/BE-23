@@ -13,7 +13,7 @@ function register() {
     let formData = {
         username, email, password
     }
-    async function postData(url = "", data = {}) {
+    async function postData(url = "", data) {
         const response = await fetch(url, {
           method: "POST",
           mode: "cors",
@@ -33,7 +33,8 @@ function register() {
       .then((data) => {
         console.log(data)
         alert("Success Register")
-        window.location = "./../index.html";
+        window.location.href = "./../index.html";
       });
+      
 }
-register()
+// register()

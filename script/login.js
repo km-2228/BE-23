@@ -14,7 +14,7 @@ function login() {
         dataUser.forEach((data) => {
             if(data.email == setEmail && data.password == setPassword){
                 alert("Success Login")
-                window.location = "./../index.html";
+                window.location.href = "./../index.html";
             }
             // else{
             //     alert("invalid login")
@@ -22,6 +22,7 @@ function login() {
             // }
         })
     })
+    .catch((error) => console.log(error));
 }
 // login()
 
