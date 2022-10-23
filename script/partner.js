@@ -20,9 +20,11 @@ const getDataApi = () => {
               <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
             </div> 
-            <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+            <a href="detail.html" id="showDetail" detailBtn class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()" usersid=`+ data.id+`>Lihat Detail</a>
           </div>`;
-
+          // $('.detailBtn').on('click', function(){
+          //   console.log($(this).data('usersid'));
+          // })
         });
     })
     .catch((error) => console.log(error));
@@ -56,7 +58,7 @@ function setName() {
               <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
             </div> 
-            <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+            <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
           </div>`;
       });
     })
@@ -93,7 +95,7 @@ function perempuan() {
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
             </div>`;
         });
       })
@@ -130,7 +132,7 @@ function laki() {
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
             </div>`;
         });
       })
@@ -166,7 +168,7 @@ function lokasiBdg() {
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
             </div>`;
         });
       })
@@ -202,7 +204,7 @@ function lokasiYog() {
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
             </div>`;
         });
       })
@@ -212,6 +214,7 @@ function lokasiYog() {
         getDataApi();
     }
 }
+
 function lokasiSby() {
   let surabaya = document.getElementById("surabaya")
   let setSby = surabaya.value;
@@ -237,7 +240,7 @@ function lokasiSby() {
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border">Lihat Detail</a>
+              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
             </div>`;
         });
       })
@@ -247,3 +250,9 @@ function lokasiSby() {
         getDataApi();
     }
 }
+
+
+// function detail() {
+//   var details = this.innerHTML
+//   console.log(details)
+// }
