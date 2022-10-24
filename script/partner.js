@@ -6,7 +6,7 @@ const getDataApi = () => {
     .then((result) => {
     let partner = document.getElementById("cardPartner");
     
-    console.log(result)
+    // console.log(result)
       
     // let dataPartner = result.results;
     result.forEach((data) => {
@@ -15,26 +15,22 @@ const getDataApi = () => {
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
             <p class="fw-semibold my-1">`+data.name+`</p>
             <div class="text-start mx-auto">
-              <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
+              <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>
               <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
-            </div> 
-            <a href="detail.html" id="showDetail" detailBtn class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()" usersid=`+ data.id+`>Lihat Detail</a>
+            </div>
+            <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
           </div>`;
-          // $('.detailBtn').on('click', function(){
-          //   console.log($(this).data('usersid'));
-          // })
         });
     })
     .catch((error) => console.log(error));
-};
+}
 getDataApi();
 
 
 
 function setName() {
-  
   let search = document.getElementById("search");
   let setSearch = search.value;
   const URL = "https://634edef8df22c2af7b452cc0.mockapi.io/partners?name="+setSearch;
@@ -58,7 +54,7 @@ function setName() {
               <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
             </div> 
-            <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
+            <button href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</button>
           </div>`;
       });
     })
@@ -78,12 +74,12 @@ function perempuan() {
   fetch(URL)
     .then((response) => response.json())
     .then((result) => {
-        console.log(result)
+        // console.log(result)
       let partner = document.getElementById("cardPartner");
       const remove = (sel) => document.querySelectorAll(sel).forEach((el) => el.remove());
       remove(".thisCard");  
       
-      console.log(result);
+      // console.log(result);
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
@@ -115,12 +111,12 @@ function laki() {
   fetch(URL)
     .then((response) => response.json())
     .then((result) => {
-        console.log(result)
+        // console.log(result)
       let partner = document.getElementById("cardPartner");
       const remove = (sel) => document.querySelectorAll(sel).forEach((el) => el.remove());
       remove(".thisCard");  
       
-      console.log(result);
+      // console.log(result);
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
@@ -143,6 +139,7 @@ function laki() {
     }
 }
 
+
 function lokasiBdg() {
   let bandung = document.getElementById("bandung")
   let setBdg = bandung.value;
@@ -151,12 +148,12 @@ function lokasiBdg() {
   fetch(URL)
     .then((response) => response.json())
     .then((result) => {
-        console.log(result)
+        // console.log(result)
       let partner = document.getElementById("cardPartner");
       const remove = (sel) => document.querySelectorAll(sel).forEach((el) => el.remove());
       remove(".thisCard");  
       
-      console.log(result);
+      // console.log(result);
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
@@ -179,6 +176,7 @@ function lokasiBdg() {
     }
 }
 
+
 function lokasiYog() {
   let yogya = document.getElementById("yogya")
   let setYogya = yogya.value;
@@ -187,12 +185,12 @@ function lokasiYog() {
   fetch(URL)
     .then((response) => response.json())
     .then((result) => {
-        console.log(result)
+        // console.log(result)
       let partner = document.getElementById("cardPartner");
       const remove = (sel) => document.querySelectorAll(sel).forEach((el) => el.remove());
       remove(".thisCard");  
       
-      console.log(result);
+      // console.log(result);
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
@@ -223,19 +221,19 @@ function lokasiSby() {
   fetch(URL)
     .then((response) => response.json())
     .then((result) => {
-        console.log(result)
+        // console.log(result)
       let partner = document.getElementById("cardPartner");
       const remove = (sel) => document.querySelectorAll(sel).forEach((el) => el.remove());
       remove(".thisCard");  
       
-      console.log(result);
+      // console.log(result);
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
               <p class="fw-semibold my-1">`+data.name+`</p>
               <div class="text-start mx-auto">
-                <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
+                <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
@@ -251,8 +249,15 @@ function lokasiSby() {
     }
 }
 
+function detailPartner(id){
+  const URL = 'https://634edef8df22c2af7b452cc0.mockapi.io/partners/' + id;
+  fetch(URL)
+    .then((response) => response.json())
+    .then((result) => {
+    console.log(result)
+    var myJSON = JSON.stringify(result)
+    localStorage.setItem( 'partnerChoose', myJSON );
+      window.location.href = "./../public/detail.html";
+    })
+}
 
-// function detail() {
-//   var details = this.innerHTML
-//   console.log(details)
-// }
