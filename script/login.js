@@ -13,6 +13,8 @@ function login() {
     .then(dataUser => {
         dataUser.forEach((data) => {
             if(data.email == setEmail && data.password == setPassword){
+                localStorage.setItem('loginAja',"benar");
+                localStorage.setItem('dataUser',JSON.stringify(dataUser));
                 alert("Success Login")
                 window.location.href = "./../index.html";
             }
