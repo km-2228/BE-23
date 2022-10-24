@@ -13,7 +13,7 @@ const getDataApi = () => {
         partner.innerHTML +=
         `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-            <p class="fw-semibold my-1">`+data.name+`</p>
+            <p class="fw-semibold my-1 text-center">`+data.name+`</p>
             <div class="text-start mx-auto">
               <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>
               <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
@@ -47,14 +47,14 @@ function setName() {
       partner.innerHTML +=
         `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-            <p class="fw-semibold my-1">`+data.name+`</p>
+            <p class="fw-semibold my-1 text-center">`+data.name+`</p>
             <div class="text-start mx-auto">
               <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
               <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
             </div> 
-            <button href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</button>
+            <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
           </div>`;
       });
     })
@@ -84,15 +84,15 @@ function perempuan() {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1">`+data.name+`</p>
+              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
-            </div>`;
+              <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
+              </div>`;
         });
       })
       .catch((error) => console.log(error));
@@ -121,15 +121,15 @@ function laki() {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1">`+data.name+`</p>
+              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
-            </div>`;
+              <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
+              </div>`;
         });
       })
       .catch((error) => console.log(error));
@@ -138,6 +138,7 @@ function laki() {
         getDataApi();
     }
 }
+
 
 
 function lokasiBdg() {
@@ -158,15 +159,15 @@ function lokasiBdg() {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1">`+data.name+`</p>
+              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
-            </div>`;
+              <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
+              </div>`;
         });
       })
       .catch((error) => console.log(error));
@@ -195,15 +196,15 @@ function lokasiYog() {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1">`+data.name+`</p>
+              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
-            </div>`;
+              <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
+              </div>`;
         });
       })
       .catch((error) => console.log(error));
@@ -231,15 +232,15 @@ function lokasiSby() {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
               <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1">`+data.name+`</p>
+              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.lokasi+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.jenisKelamin+`</p>
               </div> 
-              <a href="detail.html" id="showDetail" class="px-4 rounded-5 mt-1 bg-warning text-decoration-none text-dark fw-semibold border-danger border onclick="detail()"">Lihat Detail</a>
-            </div>`;
+              <a type="button" class="btn btn-success rounded-5 mt-1 bg-warning text-dark fw-semibold" onclick="detailPartner(${data.id})">Lihat Detail</a>
+              </div>`;
         });
       })
       .catch((error) => console.log(error));
