@@ -1,5 +1,5 @@
 const getDataApi = () => {
-  const URL = "https://634edef8df22c2af7b452cc0.mockapi.io/partners";
+  const URL = "https://634edef8df22c2af7b452cc0.mockapi.io/partners?page=1&limit=10";
 
   fetch(URL)
     .then((response) => response.json())
