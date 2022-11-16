@@ -1,14 +1,3 @@
-// var data = localStorage.getItem('parterChoose');
-// console.log(data);
-
-// const displayDetail = (data) => {
-//     for(let i=0; i<data.length; i++) {
-//         const target = localStorage.getItem("partnerChoose");
-//         if(data[i].id == target) {
-//             detailPartner(data[i]);
-//         }
-//     }
-// }
 
 const detailPartner = () => {
     let partner = document.getElementById("detailPartner");
@@ -20,9 +9,9 @@ const detailPartner = () => {
     partner.innerHTML =
     `<div class="row my-4 p-3">
         <div class="col-md-3">
-            <img src="https://picsum.photos/200/300?random=1" class="rounded" />
+            <img src="`+item.imgPath+`" width="100%" height="350" class="rounded" />
             <div class="ratings pt-2">
-            <p class=""><b>`+item?.rating+`</b></p>
+            <p class="text-center"><b>`+item?.rating+`</b></p>
             </div>
         </div>
         <div class="col-md-9">
@@ -49,10 +38,10 @@ const detailPartner = () => {
         </div>
     </div> 
     
-    <footer class="text white pt-5 pb-4 gradient-background">
+  <footer class="text white my-5 p-5 rounded gradient-background">
     <div class="container review">
       <h3><b>Reviews</b></h3>
-      <div class="card mb-3">
+      <div class="card">
         <div class="card-body">
           <div class="row">
             <div class="col-md-1">

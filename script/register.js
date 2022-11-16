@@ -3,7 +3,6 @@ const addUsername = document.getElementById("addUsername");
 const addEmail = document.getElementById("addEmail");
 const addPassword = document.getElementById("addPassword");
 let user = null;
-// const btnRegister = document.getAnimations("btnRegister");
 
 
 function register() {
@@ -32,28 +31,11 @@ function register() {
 
       postData(URL,formData)
       .then((data) => {
+        var myJSON = JSON.stringify(data)
+        localStorage.setItem( 'dataUser', myJSON );
         console.log(data)
-        localStorage.setItem('loginAja',"benar");
-        // localStorage.setItem('dataUser',JSON.stringify(dataUser));
         alert("Success Register")
         window.location.href = "./../index.html";
 
       });
 }
-
-function cekLocalStorage(){
-  let cekUser = localStorage.getItem('loginAja');
-  if(cekUser == "benar"){
-      user = JSON.parse(localStorage.getItem('dataUser'));
-  } else{
-      user = JSON.parse(sessionStorage.getItem('dataUser'));
-  }
-}
-
-// window.onload = function(){
-//   cekLocalStorage()
-//   if(user != null){
-//       window.location.href = "./../index.html";
-//   }
-// }
-// register()

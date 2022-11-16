@@ -12,8 +12,8 @@ const getDataApi = () => {
     result.forEach((data) => {
         partner.innerHTML +=
         `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-            <p class="fw-semibold my-1 text-center">`+data.name+`</p>
+        <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
+        <p class="fw-semibold my-1 text-center">`+data.name+`</p>
             <div class="text-start mx-auto">
               <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>
               <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
@@ -46,7 +46,7 @@ function setName() {
     result.forEach((data) => {
       partner.innerHTML +=
         `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
+        <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
             <p class="fw-semibold my-1 text-center">`+data.name+`</p>
             <div class="text-start mx-auto">
               <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
@@ -83,8 +83,8 @@ function perempuan() {
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
+          <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
+          <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
@@ -120,8 +120,8 @@ function laki() {
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
+          <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
+          <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
@@ -158,8 +158,8 @@ function lokasiBdg() {
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
-              <p class="fw-semibold my-1 text-center">`+data.name+`</p>
+          <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
+          <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
                 <p class="detail"><b>Pendidikan :</b> `+data.pendidikan+`</p>
@@ -195,7 +195,7 @@ function lokasiYog() {
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
+          <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
               <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> `+data.pengalaman+`</p>
@@ -214,6 +214,7 @@ function lokasiYog() {
     }
 }
 
+
 function lokasiSby() {
   let surabaya = document.getElementById("surabaya")
   let setSby = surabaya.value;
@@ -231,7 +232,7 @@ function lokasiSby() {
       result.forEach((data) => {
         partner.innerHTML +=
           `<div class="card rounded-4 shadow-sm text-white p-4 d-flex flex-column align-items-center thisCard">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80" alt="person" width="72" height="72" class="rounded-circle image-person" />
+          <img src="`+data.imgPath+`" "alt="person" width="78" height="78" class="rounded-circle image-person"></>
               <p class="fw-semibold my-1 text-center">`+data.name+`</p>
               <div class="text-start mx-auto">
                 <p class="detail"><b>Pengalaman :</b> ${data.pengalaman}</p>

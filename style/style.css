@@ -18,13 +18,24 @@ body{
 nav{
     height: 12vh;
 }
+
+nav .btnSignup{
+    color:rgb(135, 38, 225);
+    background-color: #ffff;
+}
+nav .btnSignup:hover{
+    color: white;
+    background-color:rgb(135, 38, 225) ;
+}
+
 .navMenu ul li a{
-    color: black;
+    color: #ffff;
 }
 
 .navMenu ul li a:hover{
     color:  rgb(135, 38, 225);
 }
+
 
 /* header */
 
@@ -57,11 +68,20 @@ nav{
     height: 400px;
 }
 
+.btnJoin{
+    background-color:  rgb(135, 38, 225);
+    color: #ffff;
+}
+.btnJoin:hover{
+    background-color: #ffff;
+    color:  rgb(135, 38, 225);
+}
+
 
 /* alur */
 #alur{
-    height: 600px;
-    margin-top: 100px;
+    height: 700px;
+    margin-top: 180px;
 }
 
 /* konten */
@@ -78,13 +98,51 @@ nav{
 }
 
 .konten .partner img{
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 450px;
 }
 
 .konten .partner h2{
     font-size: 45px;
 }
+
+.konten .btnFind{
+    color:rgb(135, 38, 225);
+    background-color: #ffff;
+}
+
+.konten .btnFind:hover{
+    color: white;
+    background-color:rgb(135, 38, 225) ;
+}
+
+
+/* footer */
+
+
+.footer {
+  height: 340px;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+}
+
 
 @media only screen and (max-width: 914px) {
     .container-fluid .langkah{
